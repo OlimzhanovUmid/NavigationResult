@@ -10,11 +10,11 @@ import javax.inject.Inject
  * Created by uolimzhanov on 12.08.2024
  */
 @HiltViewModel
-class SecondViewModel @Inject constructor() : ViewModel(), BaseViewModel {
+class SecondViewModel @Inject constructor() : ViewModel() {
     private val _text = MutableStateFlow("I don't know your name¯\\_(ツ)_/¯")
     val text = _text.asStateFlow()
 
-    override fun onUpdateText(text: String) {
+    fun onUpdateText(text: String) {
         _text.value = "Now I know your name, $text:D"
     }
 }

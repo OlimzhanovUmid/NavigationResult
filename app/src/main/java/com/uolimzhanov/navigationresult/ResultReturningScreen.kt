@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,7 +50,8 @@ fun ScreenWithResult(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Write down your name:"
+            text = "Write down your name:",
+            style = MaterialTheme.typography.displayLarge
         )
         OutlinedTextField(
             value = screenState.username,

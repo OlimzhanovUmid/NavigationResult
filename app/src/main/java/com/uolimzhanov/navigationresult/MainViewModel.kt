@@ -10,11 +10,11 @@ import javax.inject.Inject
  * Created by uolimzhanov on 12.08.2024
  */
 @HiltViewModel
-class MainViewModel @Inject constructor() : ViewModel(), BaseViewModel {
+class MainViewModel @Inject constructor() : ViewModel() {
     private val _greetingMessage = MutableStateFlow("Hello, user!")
     val greetingMessage = _greetingMessage.asStateFlow()
 
-    override fun onUpdateText(text: String) {
+    fun onUpdateText(text: String) {
         _greetingMessage.value = "Hello, $text!"
     }
 }
