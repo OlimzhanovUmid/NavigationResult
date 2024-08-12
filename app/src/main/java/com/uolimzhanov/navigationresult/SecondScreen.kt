@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.uolimzhanov.navigationresult.ui.SecondViewModel
 
 /**
  * Created by uolimzhanov on 12.08.2024

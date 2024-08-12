@@ -13,7 +13,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.uolimzhanov.navigationresult.ui.SecondViewModel
 import com.uolimzhanov.navigationresult.ui.theme.NavigationResultTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.serialization.Serializable
@@ -81,7 +80,7 @@ class MainActivity : ComponentActivity() {
 */
                             ScreenWithResultRoot(
                                 onGoBack = { username ->
-                                    parentViewModel.updateGreetingMessage(username)
+                                    parentViewModel.onUpdateText(username)
                                     navController.navigateUp()
                                 }
                             )

@@ -74,9 +74,14 @@ fun MainScreen(
                 tint = MaterialTheme.colorScheme.onPrimary
             )
         }
-/*
-        Button(onClick = onGoToSecondScreen) {
+
+        Button(
+            modifier = Modifier
+                .padding(24.dp)
+                .align(Alignment.BottomStart),
+            onClick = onGoToSecondScreen
+        ) {
             Text(text = "Go to second screen")
-        }*/
+        }
     }
 }
