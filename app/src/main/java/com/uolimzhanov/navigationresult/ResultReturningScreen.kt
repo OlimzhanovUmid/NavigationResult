@@ -50,8 +50,7 @@ fun ScreenWithResult(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Write down your name:",
-            style = MaterialTheme.typography.displayLarge
+            text = "Write down your name:"
         )
         OutlinedTextField(
             value = screenState.username,
