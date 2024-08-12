@@ -53,14 +53,13 @@ class MainActivity : ComponentActivity() {
                         }
                         composable<Screens.ResultReturningRoute> { entry ->
                             val args = entry.toRoute<Screens.ResultReturningRoute>()
-                            println(args.previousScreenName)
-                            val parentEntry = remember(entry) {
-                                navController.getBackStackEntry<Screens.MainRoute>()
-                            }
-                            val parentViewModel = hiltViewModel<MainViewModel>(parentEntry)
 
-                            /*val parentViewModel = when (args.previousScreenName) {
+                            val parentViewModel = when (args.previousScreenName) {
                                 "Main" -> {
+                                    val parentEntry = remember(entry) {
+                                        navController.getBackStackEntry<Screens.MainRoute>()
+                                    }
+                                    hiltViewModel<MainViewModel>(parentEntry)
                                 }
 
                                 "Second" -> {
@@ -77,7 +76,7 @@ class MainActivity : ComponentActivity() {
                                     hiltViewModel<MainViewModel>(parentEntry)
                                 }
                             }
-*/
+
                             ScreenWithResultRoot(
                                 onGoBack = { username ->
                                     parentViewModel.onUpdateText(username)
